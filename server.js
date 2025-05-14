@@ -9,6 +9,11 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+}
+);
+
 // Register route
 app.post('/register', async (req, res) => {
     try {
